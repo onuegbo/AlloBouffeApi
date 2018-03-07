@@ -28,8 +28,6 @@ schema_view = get_schema_view(title='Allobouffe API')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-
-
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     url(r'^schema/$', schema_view),
     url(r'^', include('allobouffe.urls')),
